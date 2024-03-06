@@ -1,0 +1,364 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.6",
+  "deps": {
+    "axios": "^1.6.7",
+    "element-plus": "^2.6.0",
+    "vue": "^3.3.4",
+    "vue-router": "^4.3.0",
+    "@nx/eslint": "18.0.6",
+    "@nx/eslint-plugin": "18.0.6",
+    "@nx/js": "18.0.6",
+    "@nx/vite": "18.0.6",
+    "@nx/vue": "18.0.6",
+    "@nx/web": "18.0.6",
+    "@nx/workspace": "18.0.6",
+    "@swc-node/register": "~1.8.0",
+    "@swc/core": "~1.3.85",
+    "@swc/helpers": "~0.5.2",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/ui": "^1.3.1",
+    "@vue/eslint-config-prettier": "7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/test-utils": "^2.4.1",
+    "eslint": "~8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vue": "^9.16.1",
+    "jsdom": "~22.1.0",
+    "nx": "18.0.6",
+    "prettier": "^2.6.2",
+    "sass": "1.62.1",
+    "typescript": "~5.3.2",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "~5.0.0",
+    "vite-plugin-dts": "~2.3.0",
+    "vitest": "^1.3.1",
+    "vue-tsc": "^1.8.8"
+  },
+  "pathMappings": {
+    "@task-flow/data-access": [
+      "libs/data-access/src/index.ts"
+    ],
+    "@task-flow/ui": [
+      "libs/ui/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "ui": [
+        {
+          "file": "libs/ui/.eslintrc.json",
+          "hash": "3129093581658583478"
+        },
+        {
+          "file": "libs/ui/README.md",
+          "hash": "12971312433074001572"
+        },
+        {
+          "file": "libs/ui/package.json",
+          "hash": "224548447636962439"
+        },
+        {
+          "file": "libs/ui/project.json",
+          "hash": "16833092230311499781"
+        },
+        {
+          "file": "libs/ui/src/components/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ui/src/index.ts",
+          "hash": "406893267761917856"
+        },
+        {
+          "file": "libs/ui/src/vue-shims.d.ts",
+          "hash": "1350740973621485859",
+          "deps": [
+            "npm:vue"
+          ]
+        },
+        {
+          "file": "libs/ui/tsconfig.json",
+          "hash": "17779487182718323813"
+        },
+        {
+          "file": "libs/ui/tsconfig.lib.json",
+          "hash": "7566345199268402598"
+        },
+        {
+          "file": "libs/ui/tsconfig.spec.json",
+          "hash": "15943385144407153049"
+        },
+        {
+          "file": "libs/ui/vite.config.ts",
+          "hash": "7019988182040188279",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-vue",
+            "npm:vite-plugin-dts",
+            "npm:path",
+            "npm:@nx/vite"
+          ]
+        }
+      ],
+      "task-flow": [
+        {
+          "file": ".eslintignore",
+          "hash": "7663861978715868291"
+        },
+        {
+          "file": ".eslintrc.base.json",
+          "hash": "1097226729309206468"
+        },
+        {
+          "file": ".eslintrc.json",
+          "hash": "15622829005268453596"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "16877376182141465221"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "16448050467312557263"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "4134969992917317260"
+        },
+        {
+          "file": "README.md",
+          "hash": "6711466860373304252"
+        },
+        {
+          "file": "auto-imports.d.ts",
+          "hash": "15520909744384406701"
+        },
+        {
+          "file": "components.d.ts",
+          "hash": "2093193973744389117",
+          "deps": [
+            "npm:vue",
+            "npm:element-plus",
+            "npm:vue-router"
+          ]
+        },
+        {
+          "file": "index.html",
+          "hash": "14893512171176618638"
+        },
+        {
+          "file": "nx.json",
+          "hash": "17787105975271211025"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "14764376034457955384"
+        },
+        {
+          "file": "package.json",
+          "hash": "5665470898741574628",
+          "deps": [
+            "npm:axios",
+            "npm:element-plus",
+            "npm:vue",
+            "npm:vue-router",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/js",
+            "npm:@nx/vite",
+            "npm:@nx/vue",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:@vue/eslint-config-prettier",
+            "npm:@vue/eslint-config-typescript",
+            "npm:@vue/test-utils",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-vue",
+            "npm:jsdom",
+            "npm:nx",
+            "npm:prettier",
+            "npm:sass",
+            "npm:typescript",
+            "npm:unplugin-auto-import",
+            "npm:unplugin-vue-components",
+            "npm:vite",
+            "npm:vite-plugin-dts",
+            "npm:vitest",
+            "npm:vue-tsc"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "2143343385282326383"
+        },
+        {
+          "file": "src/app/App.spec.ts",
+          "hash": "16378082789625084976",
+          "deps": [
+            "npm:vitest",
+            "npm:@vue/test-utils"
+          ]
+        },
+        {
+          "file": "src/app/App.vue",
+          "hash": "9026261559988264346"
+        },
+        {
+          "file": "src/app/router/index.ts",
+          "hash": "13063465864191303381",
+          "deps": [
+            "npm:vue-router"
+          ]
+        },
+        {
+          "file": "src/app/scss/style.scss",
+          "hash": "13898737055683193014"
+        },
+        {
+          "file": "src/app/shared/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/views/AuthView.vue",
+          "hash": "12509585947794214839",
+          "deps": [
+            "npm:element-plus",
+            "npm:vue"
+          ]
+        },
+        {
+          "file": "src/app/views/HomeView.vue",
+          "hash": "1699130487849072154"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "17895018104695646664",
+          "deps": [
+            "npm:vue",
+            "npm:element-plus"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "1586791217742725897"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "9038391081834444402"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "11347135526834973069"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "5924136005829196371"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "17064385055211178187",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-vue",
+            "npm:@nx/vite",
+            "npm:unplugin-auto-import",
+            "npm:unplugin-vue-components"
+          ]
+        }
+      ],
+      "data-access": [
+        {
+          "file": "libs/data-access/.eslintrc.json",
+          "hash": "3129093581658583478"
+        },
+        {
+          "file": "libs/data-access/README.md",
+          "hash": "4091139771941380664"
+        },
+        {
+          "file": "libs/data-access/package.json",
+          "hash": "14114649158363703714"
+        },
+        {
+          "file": "libs/data-access/project.json",
+          "hash": "6718001811259794198"
+        },
+        {
+          "file": "libs/data-access/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/data-access/src/vue-shims.d.ts",
+          "hash": "1350740973621485859",
+          "deps": [
+            "npm:vue"
+          ]
+        },
+        {
+          "file": "libs/data-access/tsconfig.json",
+          "hash": "17779487182718323813"
+        },
+        {
+          "file": "libs/data-access/tsconfig.lib.json",
+          "hash": "7566345199268402598"
+        },
+        {
+          "file": "libs/data-access/tsconfig.spec.json",
+          "hash": "15943385144407153049"
+        },
+        {
+          "file": "libs/data-access/vite.config.ts",
+          "hash": "9761185358105614967",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-vue",
+            "npm:vite-plugin-dts",
+            "npm:path",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "libs/data-access/src/services/AuthService.ts",
+          "hash": "1923674660577966650"
+        }
+      ]
+    }
+  }
+}
