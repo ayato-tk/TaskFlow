@@ -1,6 +1,10 @@
 <script lang="ts" setup>
+import { AuthService } from '@task-flow/data-access';
 import type { FormInstance } from 'element-plus';
 import { reactive, ref, toRefs } from 'vue'
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const signInFormRef = ref<FormInstance>();
 
@@ -15,10 +19,12 @@ const form = reactive({
     password: ''
 })
 
-const submitForm = (element: FormInstance ) => {
+const submitForm = (element: FormInstance, name: string, password: string ) => {
     element.validate((valid) => {
        if(valid){
-        console.log("submit!")
+        const authService = new AuthService();
+        authService.signIn(name, password);
+        router.push('/home')
        } else {
         console.log("error submited")
        }
@@ -40,7 +46,7 @@ const submitForm = (element: FormInstance ) => {
                 <el-input v-model="form.password" type="password"/>
             </el-form-item>
             <el-form-item align-center>
-                <el-button type="primary" @click="submitForm(signInFormRef)">Sign-in</el-button>
+                <el-button type="primary" @click="submitForm(signInFormRef, form.name, form.password)">Sign-in</el-button>
             </el-form-item>
         </el-form>
     </el-card>

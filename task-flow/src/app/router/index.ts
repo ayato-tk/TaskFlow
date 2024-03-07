@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { AuthService } from '@task-flow/data-access'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/home',
@@ -14,8 +14,8 @@ const router = createRouter({
       }
     },
     {
-        path: '',
-        name: '',
+        path: '/auth',
+        name: 'auth',
         component: () => import('../views/AuthView.vue')
     }
   ]
@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
     if (authService.isAuthenticated()) {
       next()
     } else {
-      next('/login')
+      next('/auth')
     }
   } else {
     next()
